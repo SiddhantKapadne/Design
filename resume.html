@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Designer Resume</title>
+    <style>
+        :root {
+            --primary-bg: #121212;
+            --text-color: #FFFFFF;
+            --accent-color: #A0A0A0;
+            --highlight: #FF4081;
+            --grid-gap: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        .custom-cursor {
+            width: 8px;
+            height: 8px;
+            background: var(--highlight);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            letter-spacing: -0.02em;
+            padding-top: 80px; /* Added to account for fixed nav */
+        }
+
+        nav {
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.95);
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            height: 80px; /* Fixed height */
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0;
+            color: var(--highlight);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        .resume-container {
+            max-width: 1000px;
+            margin: 40px auto 60px; /* Adjusted top margin */
+            padding: 0 2rem;
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .resume-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--highlight);
+            font-weight: 300;
+        }
+
+        .resume-header p {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .resume-section {
+            margin-bottom: 3rem;
+        }
+
+        .resume-section h2 {
+            font-size: 1.5rem;
+            color: var(--highlight);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+        }
+
+        .experience-item h3, .education-item h3 {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .experience-item .company, .education-item .institution {
+            color: var(--highlight);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item .duration, .education-item .duration {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category h3 {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+            }
+
+            .resume-container {
+                padding: 0 1rem;
+            }
+
+            .resume-header h1 {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .custom-cursor {
+                display: none;
+            }
+
+            body {
+                padding-top: 60px; /* Adjusted for smaller nav on mobile */
+            }
+
+            nav {
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    
+    <nav>
+        <div class="logo">SK</div>
+        <div class="nav-links">
+            <a href="index.html#work">Work</a>
+            <a href="index.html#about">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="resume-container">
+        <div class="resume-header">
+            <!-- <h1>Siddhant Kapadne</h1> -->
+            <p>UX Designer & Information Designer</p>
+        </div>
+
+        <div class="resume-section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Frontend Developer</h3>
+                <div class="company">Zimozi Solutions Pvt Ltd, Remote</div>
+                <div class="duration">5 Months</div>
+                <p>Worked in an Agile environment on Multiple Existing web apps from different clients. Did Front-end development using Vue.js, AMP pages</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Web Developer</h3>
+                <div class="company">DailyCutting, Remote</div>
+                <div class="duration">1 Month</div>
+                <p>Developed features on the front-end of an existing web app using React, Sass, and sequelize. Defined schema of tables and created tables in database using MySql on AWS server.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Web Developer</h3>
+                <div class="company">OkayGo, Remote</div>
+                <div class="duration">3 Months</div>
+                <p>Developed a website with modern JavaScript, HTML5, CSS3, and JQuery and converted it to a WordPress theme. Developed features of Front-End in Admin Dashboard using React.</p>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Master of Design (M.Des) in Information Design</h3>
+                <div class="institution">National Institute of Design</div>
+                <div class="duration">July 2023 - Present</div>
+                <div class="grade">AGPA: 8.02</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Bachelor of Engineering in Information Technology</h3>
+                <div class="institution">Datta Meghe College of Engineering Navi-Mumbai</div>
+                <div class="duration">August 2017 - November 2020</div>
+                <div class="grade">CGPI: 6.75/10</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Diploma in Information Technology</h3>
+                <div class="institution">Shah and Anchore Kuttchi Polytechnic, Mumbai</div>
+                <div class="duration">August 2014 - May 2017</div>
+                <div class="grade">Score: 79.65%</div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <ul class="skill-list">
+                        <li>UI/UX Design</li>
+                        <li>Data Visualization</li>
+                        <li>Service Design</li>
+                        <li>Information Architecture</li>
+                        <li>Design Thinking</li>
+                        <li>Web Design</li>
+                        <li>3D Modeling</li>
+                        <li>Visual Communication</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Research</h3>
+                    <ul class="skill-list">
+                        <li>Research Methodologies</li>
+                        <li>User Interviews</li>
+                        <li>Focus Groups</li>
+                        <li>Contextual Enquiry</li>
+                        <li>Heuristic Evaluation</li>
+                        <li>Cognitive Walkthroughs</li>
+                        <li>Neuroscience</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul class="skill-list">
+                        <li>Figma</li>
+                        <li>Adobe Suite</li>
+                        <li>Blender</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>CMS</li>
+                        <li>Jira</li>
+                        <li>Miro</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Empathy</li>
+                        <li>Active Listening</li>
+                        <li>Collaboration</li>
+                        <li>Open-Mindedness</li>
+                        <li>Strategic Thinking</li>
+                        <li>Communication</li>
+                        <li>Critical Thinking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.custom-cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                document.querySelector('.custom-cursor').style.transform = 'scale(2)';
+            });
+            item.addEventListener('mouseleave', () => {
+                document.querySelector('.custom-cursor').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
+

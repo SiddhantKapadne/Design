@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhant Kapadne Portfolio</title>
+    <style>
+        :root {
+            --primary-bg: #121212;
+            --text-color: #FFFFFF;
+            --accent-color: #A0A0A0;
+            --highlight: #FF4081;
+            --grid-gap: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        .custom-cursor {
+            width: 8px;
+            height: 8px;
+            background: var(--highlight);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            letter-spacing: -0.02em;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.95);
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0;
+            color: var(--highlight);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 0 4rem;
+            position: relative;
+            background: var(--primary-bg);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            font-weight: 300;
+            color: var(--text-color);
+            background: linear-gradient(45deg, var(--text-color), var(--highlight));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.5s;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Work Grid */
+        .works {
+            padding: 6rem 4rem;
+            position: relative;
+            /* background: #1A1A1A; */
+            background: var(--primary-bg);
+        }
+
+        .works h2 {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            color: var(--highlight);
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--grid-gap);
+            position: relative;
+        }
+
+        .work-item {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: var(--primary-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .work-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            filter: grayscale(100%) brightness(0.8);
+        }
+
+        .work-item:hover img {
+            transform: scale(1.03);
+            filter: grayscale(0%) brightness(1);
+        }
+
+        .work-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: rgba(18, 18, 18, 0.95);
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .work-item:hover .work-info {
+            transform: translateY(0);
+        }
+
+        .work-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            color: var(--highlight);
+        }
+
+        .work-info p {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+            }
+
+            .hero {
+                padding: 0 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .works {
+                padding: 4rem 2rem;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .custom-cursor {
+                display: none;
+            }
+
+            .works {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <!-- Navigation starts -->
+    <nav>
+        <div class="logo">SK</div>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <!-- Navigation ends -->
+
+    <!-- Hero section starts -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Siddhant Engineer turned Designer to create meaningful user experiences using empathy</h1>
+            <p>UX Designer based in India</p>
+        </div>
+
+        <!-- Moving Banner -->
+        <div class="marquee-container">
+            <div class="marquee">
+                <span>UX Design</span>
+                <span>•</span>
+                <span>Data Visualization</span>
+                <span>•</span>
+                <span>Information Design</span>
+                <span>•</span>
+                <span>Service Design</span>
+                <span>•</span>
+                <span>Product Design</span>
+                <span>•</span>
+                <span>Human-Centered Design</span>
+                <span>•</span>
+                <span>UX Design</span>
+                <span>•</span>
+                <span>Data Visualization</span>
+                <span>•</span>
+                <span>Information Design</span>
+                <span>•</span>
+                <span>Service Design</span>
+                <span>•</span>
+                <span>Product Design</span>
+                <span>•</span>
+                <span>Human-Centered Design</span>
+                <span>•</span>
+            </div>
+        </div>
+    
+        <style>
+            .marquee-container {
+                width: 100%;
+                height: 40px;
+                overflow: hidden;
+                position: absolute;
+                bottom: 0;
+                background: rgba(18, 18, 18, 0.9);
+                backdrop-filter: blur(5px);
+            }
+    
+            .marquee {
+                white-space: nowrap;
+                display: inline-block;
+                animation: marquee 30s linear infinite;
+            }
+    
+            .marquee span {
+                display: inline-block;
+                padding: 0 20px;
+                font-size: 0.9rem;
+                color: var(--accent-color);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+    
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+        </style>
+        <!-- moving banner ends -->
+
+    </section>
+    <!-- Hero section ends -->
+   
+
+    <section class="works" id="work">
+        <h2>Selected Projects</h2>
+        <div class="work-grid">
+            <div class="work-item">
+                <img src="/portfolioSite/Image/projectThumbNail/tipOff.png" alt="Project 1">
+                <div class="work-info">
+                    <h3>Mobile UI & User Experience</h3>
+                    <p>UI/UX Design, Research, Prototyping</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="/portfolioSite/Image/projectThumbNail/ServiceDesign.png" alt="Project 2">
+                <div class="work-info">
+                    <h3>Service Design</h3>
+                    <p>Website Design, Product Design, Mobile App Design, Prototyping</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="/portfolioSite/Image/projectThumbNail/Shazam.png" alt="Project 4">
+                <div class="work-info">
+                    <h3>Design System</h3>
+                    <p>Systems Design</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="/portfolioSite/Image/projectThumbNail/Carbon.png" alt="Project 3">
+                <div class="work-info">
+                    <h3>Data Visualization</h3>
+                    <p>Scrolly telling, Information Design, Data Visualization</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="/portfolioSite/Image/projectThumbNail/Shazam.png" alt="Project 4">
+                <div class="work-info">
+                    <h3>Design System</h3>
+                    <p>Systems Design</p>
+                </div>
+            </div>
+            <div class="work-item">
+                <img src="/portfolioSite/Image/projectThumbNail/Carbon.png" alt="Project 3">
+                <div class="work-info">
+                    <h3>Data Visualization</h3>
+                    <p>Scrolly telling, Information Design, Data Visualization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.custom-cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, .work-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                document.querySelector('.custom-cursor').style.transform = 'scale(2)';
+            });
+            item.addEventListener('mouseleave', () => {
+                document.querySelector('.custom-cursor').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

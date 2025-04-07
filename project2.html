@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study 2 - Siddhant Kapadne</title>
+    <style>
+        :root {
+            --primary-bg: #121212;
+            --text-color: #FFFFFF;
+            --accent-color: #A0A0A0;
+            --highlight: #FF4081;
+            --grid-gap: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        .custom-cursor {
+            width: 8px;
+            height: 8px;
+            background: var(--highlight);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            letter-spacing: -0.02em;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.95);
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0;
+            color: var(--highlight);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        /* Case Study Section */
+        .case-study {
+            padding-top: 80px;
+        }
+
+        .case-study-image {
+            width: 100%;
+            /* margin-bottom: 2rem; */
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+            }
+
+            .case-study {
+                padding-top: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .custom-cursor {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    
+    <!-- Navigation starts -->
+    <nav>
+        <a class="logo" href="index.html">SK</a>
+        <div class="nav-links">
+            <a href="index.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+    <!-- Navigation ends -->
+
+    <section class="case-study">
+        <div class="case-study-image">
+            <img src="Image/Service_Design/1.png" alt="Case Study Image 1">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/2.png" alt="Case Study Image 2">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/3.png" alt="Case Study Image 3">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/4.png" alt="Case Study Image 4">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/5.png" alt="Case Study Image 5">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/6.png" alt="Case Study Image 6">
+        </div>  
+        <div class="case-study-image">
+            <img src="Image/Service_Design/7.png" alt="Case Study Image 7">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/8.png" alt="Case Study Image 8">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/9.png" alt="Case Study Image 9">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/10.png" alt="Case Study Image 10">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/11.png" alt="Case Study Image 11">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/12.png" alt="Case Study Image 12">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/13.png" alt="Case Study Image 13">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/14.png" alt="Case Study Image 14">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/15.png" alt="Case Study Image 15">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/16.png" alt="Case Study Image 16">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/17.png" alt="Case Study Image 17">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/18.png" alt="Case Study Image 18">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/30.png" alt="Case Study Image 30">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/29.png" alt="Case Study Image 29">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/19.png" alt="Case Study Image 19">
+        </div>
+        <!-- <div class="case-study-image">
+            <img src="Image/Service_Design/20.png" alt="Case Study Image 20">
+        </div> -->
+        <!-- <div class="case-study-image">
+            <img src="Image/Service_Design/21.png" alt="Case Study Image 21">
+        </div> -->
+        <!-- <div class="case-study-image">
+            <img src="Image/TipOff/Page 22.png" alt="Case Study Image 1">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/TipOff/Page 23.png" alt="Case Study Image 1">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/TipOff/Page 24.png" alt="Case Study Image 1">
+        </div> -->
+        <div class="case-study-image">
+            <img src="Image/Service_Design/22.png" alt="Case Study Image 22">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/26.png" alt="Case Study Image 26">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/23.png" alt="Case Study Image 23">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/27.png" alt="Case Study Image 27">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/28.png" alt="Case Study Image 28">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/24.png" alt="Case Study Image 24">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/25.png" alt="Case Study Image 25">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/31.png" alt="Case Study Image 31">
+        </div>
+        <div class="case-study-image">
+            <img src="Image/Service_Design/32.png" alt="Case Study Image 32">
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.custom-cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                document.querySelector('.custom-cursor').style.transform = 'scale(2)';
+            });
+            item.addEventListener('mouseleave', () => {
+                document.querySelector('.custom-cursor').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Siddhant Kapadne</title>
+    <style>
+        :root {
+            --primary-bg: #121212;
+            --text-color: #FFFFFF;
+            --accent-color: #A0A0A0;
+            --highlight: #FF4081;
+            --grid-gap: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        .custom-cursor {
+            width: 8px;
+            height: 8px;
+            background: var(--highlight);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            letter-spacing: -0.02em;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.95);
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0;
+            color: var(--highlight);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 120px 4rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--highlight);
+            font-weight: 300;
+        }
+
+        .about-content p {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .skills {
+            margin-top: 3rem;
+        }
+
+        .skills h2 {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 64, 129, 0.1);
+            color: var(--highlight);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+            }
+
+            .about-section {
+                padding: 100px 2rem 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .custom-cursor {
+                display: none;
+            }
+
+            .about-section {
+                padding: 80px 1rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <!-- Navigation starts -->
+    <nav>
+        <a class="logo" href="index.html">SK</a>
+        <div class="nav-links">
+            <a href="index.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+    <!-- Navigation ends -->
+
+    <section class="about-section">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="Image/sidImg.JPG" alt="Siddhant Kapadne">
+            </div>
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>Hi, I'm Siddhant, a UX Designer with an engineering background. I combine analytical thinking with creative design to craft meaningful digital experiences that solve real user problems.</p>
+                <p>With over 5 years of experience in both engineering and design, I bring a unique perspective to every project. I believe in design that's not just beautiful, but functional and accessible to all users.</p>
+                <p>Currently based in India, I work with clients globally to create user-centered design solutions that make a difference.</p>
+                
+                <div class="skills">
+                    <h2>Skills & Expertise</h2>
+                    <div class="skill-tags">
+                        <span class="skill-tag">UX Design</span>
+                        <span class="skill-tag">UI Design</span>
+                        <span class="skill-tag">User Research</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">Information Architecture</span>
+                        <span class="skill-tag">Design Systems</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe XD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="interests">
+            <h2>My Interests</h2>
+            <div class="gallery-section">
+                <div class="gallery-category">
+                    <h3>On Repeat Music Albums</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="Image/interest/al1.png" alt="Favorite Album 1">
+                            <p>Art of Noise And What Have You <br> Done With My Body, God?</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Image/interest/al2.png" alt="Favorite Album 2">
+                            <p>Forever Young</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Image/interest/al3.png" alt="Favorite Album 3">
+                            <p>MCMXC a.D.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-category">
+                    <h3>Movies that I Recommend</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="image/Interest/mv1.png" alt="Favorite Movie 1" style="height: 283px;">
+                            <p>2001: a space odyssey</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="image/Interest/mv2.png" alt="Favorite Movie 2" style="height: 283px;">
+                            <p>Fantastic Planet</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="image/Interest/mv3.png" alt="Favorite Movie 3" style="height: 283px;">
+                            <p>Vanilla Sky</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-category">
+                    <h3>Fictional Books</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="image/Interest/bk1.png" alt="Favorite Book 1" style="height: 317px;">
+                            <p>Raktachandan</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="image/Interest/bk2.png" alt="Favorite Book 2" style="height: 317px;">
+                            <p>20000 leagues under the sea</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="image/Interest/bk3.png" alt="Favorite Book 3" style="height: 317px;">
+                            <p>i don't have mouth and <br> i must scream</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .interests {
+                margin-top: 4rem;
+                padding: 2rem 0;
+            }
+
+            .interests h2 {
+                color: var(--highlight);
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                font-weight: 400;
+            }
+
+            .gallery-category {
+                margin-bottom: 3rem;
+            }
+
+            .gallery-category h3 {
+                color: var(--text-color);
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+                font-weight: 400;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .gallery-item {
+                position: relative;
+                transition: transform 0.3s ease;
+            }
+
+            .gallery-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .gallery-item img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 0.5rem;
+            }
+
+            .gallery-item p {
+                color: var(--accent-color);
+                font-size: 0.9rem;
+                text-align: left;
+            }
+
+            @media (max-width: 768px) {
+                .gallery-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .gallery-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .gallery-item img {
+                    height: 250px;
+                }
+            }
+        </style>
+    </section>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.custom-cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, .skill-tag').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                document.querySelector('.custom-cursor').style.transform = 'scale(2)';
+            });
+            item.addEventListener('mouseleave', () => {
+                document.querySelector('.custom-cursor').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

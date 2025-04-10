@@ -145,6 +145,7 @@
             overflow: hidden;
             background: var(--primary-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
         }
 
         .work-item img {
@@ -220,7 +221,9 @@
 
         @media (max-width: 480px) {
             .nav-links {
-                display: none;
+                display: flex;
+                padding-right: 1rem;
+                padding-left: 0;
             }
 
             .hero h1 {

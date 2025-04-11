@@ -81,17 +81,35 @@
 
         /* Hero Section */
         .hero {
-            height: 90vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             padding: 0 4rem;
             position: relative;
             background: var(--primary-bg);
+            gap: 4rem;
         }
 
         .hero-content {
+            flex: 1;
             max-width: 800px;
             position: relative;
+        }
+
+        .hero-image {
+            flex: 1;
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
         }
 
         .hero h1 {
@@ -194,6 +212,16 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 2rem;
             }
+
+            .hero {
+                flex-direction: column;
+                padding: 6rem 2rem 0;
+                gap: 2rem;
+            }
+
+            .hero-content, .hero-image {
+                max-width: 100%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -202,7 +230,7 @@
             }
 
             .hero {
-                padding: 0 2rem;
+                padding: 6rem 2rem 0;
             }
 
             .hero h1 {
@@ -228,6 +256,10 @@
 
             .hero h1 {
                 font-size: 2rem;
+            }
+
+            .hero-content, .hero-image {
+                max-width: 80%;
             }
 
             .custom-cursor {
@@ -259,6 +291,10 @@
         <div class="hero-content">
             <h1>Hi, I'm Siddhant Engineer turned Designer to create meaningful user experiences using empathy</h1>
             <p>UX Designer based in India</p>
+        </div>
+
+        <div class="hero-image">
+            <img src="/portfolioSite/Image/HeroImg.svg" alt="Siddhant Kapadne" style="transition: transform 0.3s ease; transform-origin: center center;" onmouseover="this.style.transform='perspective(1000px) rotateY(15deg)'" onmouseout="this.style.transform='perspective(1000px) rotateY(0deg)'">
         </div>
 
         <!-- Moving Banner -->

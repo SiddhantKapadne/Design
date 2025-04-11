@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Siddhant Kapadne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-bg: #121212;
+            --text-color: #FFFFFF;
+            --accent-color: #A0A0A0;
+            --highlight: #FF4081;
+            --grid-gap: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            letter-spacing: -0.02em;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 1rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.95);
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0;
+            color: var(--highlight);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--highlight);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 4rem 4rem;
+            position: relative;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+            border-radius: 20px;
+            /* background: rgba(255, 255, 255, 0.03); */
+        }
+
+        .contact-title {
+            font-size: 3rem;
+            color: var(--highlight);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .contact-description {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            background: rgba(255, 64, 129, 0.1);
+            border-radius: 12px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            gap: 10px;
+        }
+
+        .contact-link i {
+            font-size: 1.2rem;
+        }
+
+        .contact-link:hover {
+            background: rgba(255, 64, 129, 0.2);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+            }
+
+            .contact-section {
+                padding: 100px 2rem 2rem;
+            }
+
+            .contact-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+
+            .contact-section {
+                padding: 80px 1rem 1rem;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation starts -->
+    <nav>
+        <a class="logo" href="index.html">SK</a>
+        <div class="nav-links">
+            <a href="index.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <!-- Navigation ends -->
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1 class="contact-title">Let's Connect</h1>
+            <p class="contact-description">Feel free to reach out for collaborations or just a friendly hello</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/siddhant-kapadne-459013159/" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://medium.com/@ksiddhant46" target="_blank" class="contact-link">
+                    <i class="fab fa-medium"></i>
+                    Medium
+                </a>
+                <a href="mailto:ksiddhant46@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

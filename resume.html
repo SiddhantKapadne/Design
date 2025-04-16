@@ -147,6 +147,28 @@
         .skill-list li {
             margin-bottom: 0.5rem;
         }
+        .download-btn{
+            display: inline-block;
+        padding: 12px 25px;
+        background-color: #23db95;
+        color: var(--primary-bg);
+        text-decoration: none;
+        border-radius: 25px;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(0, 255, 157, 0.3);
+        transform: translateY(0);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 255, 157, 0.5);
+            background-color: #00e88f;
+        }
+        &:active {
+            transform: translateY(1px);
+        }
+        }
 
         @media (max-width: 768px) {
             .resume-section {
@@ -292,28 +314,7 @@
                 </ul>
             </div>
         </div>
-        <a href="Resume.pdf" download class="download-btn" style="
-        display: inline-block;
-        padding: 12px 25px;
-        background-color: #23db95;
-        color: var(--primary-bg);
-        text-decoration: none;
-        border-radius: 25px;
-        margin-bottom: 2rem;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-        box-shadow: 0 4px 15px rgba(0, 255, 157, 0.3);
-        transform: translateY(0);
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 255, 157, 0.5);
-            background-color: #00e88f;
-        }
-        &:active {
-            transform: translateY(1px);
-        }
-        ">Download Resume</a>
+        <a href="Resume.pdf" download class="download-btn" >Download Resume</a>
     </section>
 
     <script>

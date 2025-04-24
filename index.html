@@ -22,9 +22,9 @@
     <style>
         :root {
             --primary-bg: #121212;
-            --text-color: #FFFFFF;
+            --text-color: #dddddd;
             --accent-color: #A0A0A0;
-            --highlight: #FF4081;
+            --highlight: #98ce41;
             --grid-gap: 3rem;
         }
 
@@ -148,9 +148,11 @@
             line-height: 1.1;
             font-weight: 300;
             color: var(--text-color);
-            background: linear-gradient(45deg, var(--text-color), var(--highlight));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            /* color: var(--text-color); */
+            /* background: linear-gradient(45deg, var(--text-color), var(--highlight)); */
+            
+            /* -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */
         }
 
         .hero p {
@@ -251,7 +253,7 @@
             left: 0;
             right: 0;
             height: 2px;
-            background: linear-gradient(90deg, #FF4081, #8F40FF, #40d6ff , #40ff59 , #FF4081);
+            background: linear-gradient(90deg, #98ce41, #0015ff, #98ce41);
             background-size: 200% 100%;
             animation: gradient-slide 3s linear infinite;
         }
@@ -283,7 +285,7 @@
         .footer-section h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #FF4081);
+            background: linear-gradient(90deg, #98ce41);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 600;
@@ -301,7 +303,7 @@
         .footer-section a:hover {
             color: var(--highlight);
             transform: translateX(10px);
-            text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+            text-shadow: 0 0 10px rgba(128, 255, 64, 0.5);
         }
 
         /* Responsive Design */
@@ -531,8 +533,8 @@
             <div class="work-item" onclick="window.location.href='project3.html'">
                 <img src="Image/projectThumbNail/Shazam.png" alt="Project 3">
                 <div class="work-info">
-                    <h3>Design System</h3>
-                    <p>Systems Design</p>
+                    <h3>Map in App</h3>
+                    <p>Map Design, Cartography, Prototyping, Mobile App Design</p>
                 </div>
             </div>
             <div class="work-item" onclick="window.location.href='project4.html'">

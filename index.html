@@ -63,7 +63,7 @@
             align-items: center;
             position: fixed;
             width: 100%;
-            background: rgba(18, 18, 18, 0.95);
+            background: rgba(18, 18, 18, 0.776);
             z-index: 100;
             backdrop-filter: blur(10px);
         }
@@ -143,9 +143,21 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 1.5rem;
-            line-height: 1.1;
+            line-height: 1.2;
+            font-weight: 300;
+            color: var(--text-color);
+            /* color: var(--text-color); */
+            /* background: linear-gradient(45deg, var(--text-color), var(--highlight)); */
+            
+            /* -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */
+        }
+        .hero h3 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1;
             font-weight: 300;
             color: var(--text-color);
             /* color: var(--text-color); */
@@ -343,7 +355,8 @@
                 right: -100%;
                 height: 100vh;
                 width: 100%;
-                background: rgba(18, 18, 18, 0.98);
+                background: rgba(18, 18, 18, 0.95);
+                backdrop-filter: blur(30px);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -433,8 +446,8 @@
     <!-- Hero section starts -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Hi, I'm Siddhant Engineer turned Designer to create meaningful user experiences using empathy</h1>
-            <p>UX Designer based in India</p>
+            <h1>Hi, I'm Siddhant crafting meaningful information by combining data, visual storytelling & interactive solutions to give user clarity</h1>
+            <p>M.Des in Information Design</p>
         </div>
 
         <div class="hero-image">
@@ -468,6 +481,15 @@
                 <span>•</span>
                 <span>Human-Centered Design</span>
                 <span>•</span>
+                <span>System Thinking</span>
+                <span>•</span>
+                <span>UX Design</span>
+                <span>•</span>
+                <span>Data Visualization</span>
+                <span>•</span>
+                <span>Information Design</span>
+                <span>•</span>
+                
             </div>
         </div>
     
@@ -523,6 +545,13 @@
                     <p>Map Design, Cartography, Prototyping, Mobile App Design</p>
                 </div>
             </div>
+            <div class="work-item" onclick="window.location.href='project5.html'">
+                <img src="Image/projectThumbNail/interactiveMap.webp" alt="Interaction Design">
+                <div class="work-info">
+                    <h3>Interactive Design</h3>
+                    <p> Exhibition Installation, JavaScript, Three.js, JSON ,Website Prototyping</p>
+                </div>
+            </div>
             <div class="work-item" onclick="window.location.href='project1.html'">
                 <img src="Image/projectThumbNail/tipOff.webp" alt="Project 1">
                 <div class="work-info">
@@ -538,10 +567,17 @@
                 </div>
             </div>
             <div class="work-item" onclick="window.location.href='project2.html'">
-                <img src="Image/projectThumbNail/ServiceDesign.webp" alt="Project 2">
+                <img src="Image/projectThumbNail/ServiceDesign.webp" alt="Service Design">
                 <div class="work-info">
                     <h3>Service Design</h3>
                     <p>Website Design, Product Design, Mobile App Design, Prototyping</p>
+                </div>
+            </div>
+            <div class="work-item" onclick="window.location.href='project6.html'">
+                <img src="Image/projectThumbNail/poster.webp" alt="Metaphor is Beautiful">
+                <div class="work-info">
+                    <h3>Metaphor Study</h3>
+                    <p>Awareness Poster, Data Visualization in Metaphor</p>
                 </div>
             </div>
             <!-- <div class="work-item" onclick="window.location.href='project5.html'">

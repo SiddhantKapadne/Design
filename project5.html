@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study 4 - Siddhant Kapadne</title>
+    <title>Interactive Map - Siddhant Kapadne</title>
     <style>
         :root {
             --primary-bg: #121212;
@@ -17,10 +17,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: none;
+            /* cursor: none; */
         }
 
-        .custom-cursor {
+        /* .custom-cursor {
             width: 8px;
             height: 8px;
             background: var(--highlight);
@@ -29,7 +29,7 @@
             pointer-events: none;
             z-index: 9999;
             transition: transform 0.3s ease;
-        }
+        } */
 
         body {
             background-color: var(--primary-bg);
@@ -171,7 +171,7 @@
     </style>
 </head>
 <body>
-    <div class="custom-cursor"></div>
+    <!-- <div class="custom-cursor"></div> -->
     
     <!-- Navigation starts -->
     <nav>
@@ -192,84 +192,67 @@
 
     <section class="case-study">
         <div class="case-study-image">
-            <img src="Image/Shazam/1.webp" alt="Case Study Image 1">
+            <img src="Image/InteractiveMap/Page1.webp" alt="Case Study Image 1">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/2.webp" alt="Case Study Image 2">
+            <iframe src="https://siddhantknid.github.io/exhibition/" width="100%" height="800" style="border: none; .custom-cursor{display: none;}"></iframe>
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/3.webp" alt="Case Study Image 3">
+            <img src="Image/InteractiveMap/Page2.webp" alt="Case Study Image 2">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/4.webp" alt="Case Study Image 4">
+            <img src="Image/InteractiveMap/Page3.webp" alt="Case Study Image 3">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/5.webp" alt="Case Study Image 5">
+            <img src="Image/InteractiveMap/Page4.webp" alt="Case Study Image 4">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/6.webp" alt="Case Study Image 6">
+            <img src="Image/InteractiveMap/Page5.webp" alt="Case Study Image 5">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/7.webp" alt="Case Study Image 7">
+            <img src="Image/InteractiveMap/Page6.webp" alt="Case Study Image 6">
+        </div>  
+        <div class="case-study-image">
+            <img src="Image/InteractiveMap/Page7.webp" alt="Case Study Image 7">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/8.webp" alt="Case Study Image 8">
+            <img src="Image/InteractiveMap/Page8.webp" alt="Case Study Image 8">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/9.webp" alt="Case Study Image 9">
+            <img src="Image/InteractiveMap/Page9.webp" alt="Case Study Image 9">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/10.webp" alt="Case Study Image 10">
+            <img src="Image/InteractiveMap/Page9x5.webp" alt="Case Study Image 10">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/11.webp" alt="Case Study Image 11">
+            <img src="Image/InteractiveMap/Page10.webp" alt="Case Study Image 11">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/12.webp" alt="Case Study Image 12">
+            <img src="Image/InteractiveMap/Page11.webp" alt="Case Study Image 12">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/13.webp" alt="Case Study Image 13">
+            <img src="Image/InteractiveMap/page12.webp" alt="Case Study Image 13">
         </div>
         <div class="case-study-image">
-            <img src="Image/Shazam/14.webp" alt="Case Study Image 14">
-        </div>
-        <div class="case-study-image">
-            <img src="Image/Shazam/15.webp" alt="Case Study Image 15">
-        </div>
-        <div class="case-study-image">
-            <img src="Image/Shazam/16.webp" alt="Case Study Image 16">
-        </div>
-        <div class="case-study-image">
-            <img src="Image/Shazam/17.webp" alt="Case Study Image 17">
-        </div>
-        <div class="case-study-image video-container">
-            <div class="video-wrapper" style="display: flex; justify-content: center; background-color: #FDFDFD; padding: 20px;">
-                <video autoplay muted loop style="height: 600px; width: auto;">
-                    <source src="Image/Shazam/prototype.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-        <div class="case-study-image">
-            <img src="Image/Shazam/18.webp" alt="Case Study Image 18">
+            <img src="Image/InteractiveMap/Page13.webp" alt="Case Study Image 14">
         </div>
     </section>
 
     <script>
-        document.addEventListener('mousemove', (e) => {
-            const cursor = document.querySelector('.custom-cursor');
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
+        // document.addEventListener('mousemove', (e) => {
+        //     const cursor = document.querySelector('.custom-cursor');
+        //     cursor.style.left = e.clientX + 'px';
+        //     cursor.style.top = e.clientY + 'px';
+        // });
 
-        document.querySelectorAll('a').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                document.querySelector('.custom-cursor').style.transform = 'scale(2)';
-            });
-            item.addEventListener('mouseleave', () => {
-                document.querySelector('.custom-cursor').style.transform = 'scale(1)';
-            });
-        });
+        // document.querySelectorAll('a').forEach(item => {
+        //     item.addEventListener('mouseenter', () => {
+        //         document.querySelector('.custom-cursor').style.transform = 'scale(2)';
+        //     });
+        //     item.addEventListener('mouseleave', () => {
+        //         document.querySelector('.custom-cursor').style.transform = 'scale(1)';
+        //     });
+        // });
 
         // Hamburger menu functionality
         const hamburger = document.querySelector('.hamburger');

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
+     <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-L20BFPVCNX"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -10,7 +10,6 @@
         
           gtag('config', 'G-L20BFPVCNX');
         </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siddhant Kapadne - UX Designer & Information Designer | NID IxD Portfolio</title>
@@ -30,12 +29,38 @@
     <meta name="twitter:description" content="Portfolio of Siddhant Kapadne - UX Designer and Information Designer from NID. View selected projects in UX design, information design, and service design.">
     
     <style>
+        @font-face {
+            font-family: 'Sora';
+            src: url('font/Sora-VariableFont_wght.ttf') format('truetype');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Sora';
+            src: url('font/static/Sora-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Sora';
+            src: url('font/static/Sora-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Sora';
+            src: url('font/static/Sora-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
         :root {
             --primary-bg: #121212;
             --text-color: #dddddd;
             --accent-color: #A0A0A0;
             --highlight: #98ce41;
             --grid-gap: 3rem;
+            --nav-radius: 2em;
+            --shadow: 0 10px 40px 0 rgba(30, 41, 59, 0.06), 0 2px 4px 0 rgba(30, 41, 59, 0.019);
         }
 
         * {
@@ -59,7 +84,7 @@
         body {
             background-color: var(--primary-bg);
             color: var(--text-color);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Sora', Arial, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
             letter-spacing: -0.02em;
@@ -69,13 +94,11 @@
         nav {
             padding: 1rem 4rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             position: fixed;
             width: 100%;
-            background: rgba(18, 18, 18, 0.776);
             z-index: 100;
-            backdrop-filter: blur(10px);
         }
 
         .logo {
@@ -88,20 +111,25 @@
 
         .nav-links {
             display: flex;
-            gap: 3rem;
+            gap: 20px;
+            background: #2a2a2a;
+            border-radius: var(--nav-radius);
+            box-shadow: var(--shadow);
+            padding: 8px 25px;
+            backdrop-filter: blur(10px);
         }
 
         .nav-links a {
             color: var(--text-color);
             text-decoration: none;
             font-size: 1rem;
-            font-weight: 400;
-            padding: 5px 0;
+            font-weight: 500;
+            padding: 7px 16px;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--highlight);
+            color: #98ce41;
         }
 
         .hamburger {
@@ -121,11 +149,12 @@
 
         /* Hero Section */
         .hero {
-            min-height: 90vh;
+            min-height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 0 4rem;
+            flex-direction: row;
+            padding: 4rem 4rem;
             position: relative;
             background: var(--primary-bg);
             gap: 4rem;
@@ -150,6 +179,12 @@
             height: 100%;
             object-fit: cover;
             border-radius: 20px;
+        }
+
+        .hero-image-left{
+            width: 64%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .hero h1 {
@@ -438,7 +473,6 @@
     <div class="custom-cursor"></div>
     <!-- Navigation starts -->
     <nav>
-        <a class="logo" href="index.html">SK</a>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -456,12 +490,15 @@
     <!-- Hero section starts -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Hi, I'm Siddhant crafting meaningful information by combining data, visual storytelling & interactive solutions to give user clarity</h1>
             <p>M.Des in Information Design</p>
+            <h1>
+                I’m Siddhant I design Products & services that brings clarity
+            </h1>
+            <img src="Image/CurrentTag.png" alt="" class="hero-image-left">
         </div>
 
         <div class="hero-image">
-            <img src="Image/HeroImg.svg" alt="Siddhant Kapadne" style="transition: transform 0.3s ease; transform-origin: center center;" onmouseover="this.style.transform='perspective(1000px) rotateY(15deg)'" onmouseout="this.style.transform='perspective(1000px) rotateY(0deg)'">
+            <img src="Image/am1.png" alt="Siddhant Kapadne" style="transition: transform 0.3s ease; transform-origin: center center;" onmouseover="this.style.transform='perspective(1000px) rotateY(15deg)'" onmouseout="this.style.transform='perspective(1000px) rotateY(0deg)'">
         </div>
 
         <!-- Moving Banner -->
@@ -548,32 +585,11 @@
     <section class="works" id="work">
         <h2>Selected Projects</h2>
         <div class="work-grid">
-            <div class="work-item" onclick="window.location.href='project3.html'">
-                <img src="Image/projectThumbNail/Shazam.webp" alt="Project 3">
+            <div class="work-item" onclick="window.location.href='GP.html'">
+                <img src="Image/projectThumbNail/GPCover.png" alt="Project 3">
                 <div class="work-info">
-                    <h3>Map in App</h3>
-                    <p>Map Design, Cartography, Prototyping, Mobile App Design</p>
-                </div>
-            </div>
-            <div class="work-item" onclick="window.location.href='project5.html'">
-                <img src="Image/projectThumbNail/interactiveMap.webp" alt="Interaction Design">
-                <div class="work-info">
-                    <h3>Interactive Design</h3>
-                    <p> Exhibition Installation, JavaScript, Three.js, JSON ,Website Prototyping</p>
-                </div>
-            </div>
-            <div class="work-item" onclick="window.location.href='project1.html'">
-                <img src="Image/projectThumbNail/tipOff.webp" alt="Project 1">
-                <div class="work-info">
-                    <h3>Mobile UI & User Experience</h3>
-                    <p>UI/UX Design, Research, Prototyping</p>
-                </div>
-            </div>
-            <div class="work-item" onclick="window.location.href='project4.html'">
-                <img src="Image/projectThumbNail/Carbon.webp" alt="Project 4">
-                <div class="work-info">
-                    <h3>Data Visualization</h3>
-                    <p>Scrolly telling, Information Design, Data Visualization</p>
+                    <h3>Graduation Project</h3>
+                    <p>UX/UI internship, AI, Design for AI</p>
                 </div>
             </div>
             <div class="work-item" onclick="window.location.href='project2.html'">
@@ -583,11 +599,46 @@
                     <p>Website Design, Product Design, Mobile App Design, Prototyping</p>
                 </div>
             </div>
+            <div class="work-item" onclick="window.location.href='project3.html'">
+                <img src="Image/projectThumbNail/Shazam.webp" alt="Project 3">
+                <div class="work-info">
+                    <h3>Redesign App</h3>
+                    <p>Feature addition, integration of location</p>
+                </div>
+            </div>
+            <div class="work-item" onclick="window.location.href='project5.html'">
+                <img src="Image/projectThumbNail/interactiveMap.webp" alt="Interaction Design">
+                <div class="work-info">
+                    <h3>Interactive Design</h3>
+                    <p> Exhibition Installation, JavaScript, Three.js, JSON ,Website Prototyping</p>
+                </div>
+            </div>
+            <div class="work-item" onclick="window.location.href='project4.html'">
+                <img src="Image/projectThumbNail/Carbon.webp" alt="Project 4">
+                <div class="work-info">
+                    <h3>Data Visualization</h3>
+                    <p>Scrolly telling, Information Design, Data Visualization</p>
+                </div>
+            </div>
+            <div class="work-item" onclick="window.location.href='project1.html'">
+                <img src="Image/projectThumbNail/tipOff.webp" alt="Metaphor is Beautiful">
+                <div class="work-info">
+                    <h3>Mobile App</h3>
+                    <p>Communication, Payments & Ranking</p>
+                </div>
+            </div>
             <div class="work-item" onclick="window.location.href='project6.html'">
                 <img src="Image/projectThumbNail/poster.webp" alt="Metaphor is Beautiful">
                 <div class="work-info">
                     <h3>Metaphor Study</h3>
                     <p>Awareness Poster, Data Visualization in Metaphor</p>
+                </div>
+            </div>
+            <div class="work-item" onclick="window.location.href='project6.html'">
+                <img src="Image/projectThumbNail/DApp.png" alt="Metaphor is Beautiful">
+                <div class="work-info">
+                    <h3>Decentralized Application</h3>
+                    <p>Hospital Management System, EHR, Data Management</p>
                 </div>
             </div>
             <!-- <div class="work-item" onclick="window.location.href='project5.html'">
@@ -612,10 +663,20 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
+                <h3>PAGES</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#work">Projects</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-section">
                 <h3>GET IN TOUCH</h3>
                 <p>Let's create something amazing together</p>
                 <a href="mailto:ksiddhant46@gmail.com">ksiddhant46@gmail.com</a>
             </div>
+        
             <div class="footer-section">
                 <h3>LOCATION</h3>
                 <p>Based in India</p>
@@ -661,3 +722,4 @@
     </script>
 </body>
 </html>
+ 
